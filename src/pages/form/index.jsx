@@ -114,7 +114,7 @@ const Form = () => {
 
   return (
     <Box m="20px">
-      <Header title="CREATE USER" subtitle="Create a New User Profile" />
+      <Header title={isLogin ? "LOGIN" : "CREATE USER"} subtitle={isLogin ? "login to your user profile" : "Create new user profile"} />
       <Snackbar open={showInfo} autoHideDuration={6000} onClose={handleInfoClose}>
         <Alert onClose={handleInfoClose} severity="success" sx={{ width: '100%' }}>
           User created successfully! please login.
@@ -203,45 +203,6 @@ const Form = () => {
               sx={{ gridColumn: "span 4" }}
             />
             )}
-            {/* <TextField
-              fullWidth
-              variant="filled"
-              type="text"
-              label="Contact Number"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.contact}
-              name="contact"
-              error={!!touched.contact && !!errors.contact}
-              helperText={touched.contact && errors.contact}
-              sx={{ gridColumn: "span 4" }}
-            /> */}
-            {/* <TextField
-              fullWidth
-              variant="filled"
-              type="text"
-              label="Address 1"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.address1}
-              name="address1"
-              error={!!touched.address1 && !!errors.address1}
-              helperText={touched.address1 && errors.address1}
-              sx={{ gridColumn: "span 4" }}
-            /> */}
-            {/* <TextField
-              fullWidth
-              variant="filled"
-              type="text"
-              label="Address 2"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              value={values.address2}
-              name="address2"
-              error={!!touched.address2 && !!errors.address2}
-              helperText={touched.address2 && errors.address2}
-              sx={{ gridColumn: "span 4" }}
-            /> */}
           </Box>
           <Box display="flex" justifyContent="end" mt="20px">
             <Button type="submit" color="secondary" variant="contained">
