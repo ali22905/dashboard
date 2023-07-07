@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This project is a React-based website that serves as a dashboard for analyzing data. It includes various widgets and pages to visualize and interpret data. The purpose of this project was to enhance my React skills. While I initially followed a course for part of the development, I expanded it by adding additional widgets and pages. Additionally, I implemented user authentication using Python and Django as a refresher for my backend skills.
 
-## Available Scripts
+## Installation
+To set up the project on your local machine, follow these steps:
+1. Open the console and run the following command: `npm install`
+2. To run the application, type: `npm run`
 
-In the project directory, you can run:
+## Technologies Used
+- JavaScript
+- React
+- Material-UI (Mui)
+- Nivo
+- Axios
+- Formik
+- Yup
+- React-Pro-Sidebar
+- Redux
+- React-Redux-Toolkit
+- JWT (JSON Web Tokens)
+- Python
+- Django
 
-### `npm start`
+## Features
+The primary focus of this project is to display analyzed data in a chart format. It provides various widgets and pages for visualizing and interpreting data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Code Example
+Here's an example code snippet from the calendar page:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```javascript
+const saveEvent = () => {
+  console.log(selected);
+  console.log(selected.dateStr);
+  if (selected) {
+    const event_title = title;
 
-### `npm test`
+    const calendarApi = selected.view.calendar;
+    calendarApi.unselect();
+    if (title) {
+      calendarApi.addEvent({
+        id: `${selected.dateStr}-${title}`,
+        title: event_title,
+        start: selected.startStr,
+        end: selected.endStr,
+        allDay: selected.allDay,
+      });
+    }
+    setTitle('');
+  }
+  setOpen(false);
+  setSelected(null);
+};
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact Information
+- Name: Ali Attia
+- Email: aly2292005@gmail.com
+- Phone Number: +201027393406
