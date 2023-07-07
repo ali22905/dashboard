@@ -1,0 +1,8 @@
+1 make header name to display a title for a column and make the fields to assign the key on the data object that will be 
+  displayed in the column
+
+
+2 this allows you to have access to the theme provided in the app.js
+
+
+3 this will change the colors weight in mui according to the theme
